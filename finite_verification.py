@@ -33,7 +33,7 @@ def least_square_prime_divisor(number, primes):
     return None
 
 
-def find_solution(n: int, primes: list[int]):
+def find_solution(n, primes):
     """Find (p, r, ell) with n = p + r and ell^2 dividing r."""
     for p in primes:
         if p >= n:
@@ -51,7 +51,7 @@ def find_solution(n: int, primes: list[int]):
 def main():
     primes = primes_less_than(UPPER_BOUND)
 
-    number_checked = 0
+    numbers_checked = 0
 
     for n in range(LOWER_BOUND + 1, UPPER_BOUND + 1):
         if n % 6 != 0:
@@ -67,7 +67,7 @@ def main():
         p, r, ell = solution
 
         print(f"{n}={p}+{r}, where {r} is divisible by {ell}^2 = {ell**2}.")
-        number_checked += 1
+        numbers_checked += 1
 
     print()
     print(
