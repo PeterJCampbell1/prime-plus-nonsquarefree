@@ -10,3 +10,10 @@ Computational verification for the sum of a prime and a non-square-free number.
 - **Execution:** single-threaded
 - **OS:** Windows 11, 64-bit
 - **Python:** 3.14.5
+
+## Output
+
+The complete outputs produced by the programs used for version 1 of the paper are included in the `output/` directory.
+
+- `output/compute_M_values.csv`
+- `output/finite_verification.txt`
