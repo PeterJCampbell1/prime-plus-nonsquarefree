@@ -71,7 +71,7 @@ def main():
 
     print()
     print(
-        f"Verified all {number_checked} integers n satisfying "
+        f"Verified all {numbers_checked} integers n satisfying "
         f"{LOWER_BOUND} < n <= {UPPER_BOUND} and 6 | n."
     )
 

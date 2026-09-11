@@ -1,5 +1,5 @@
 MIN_Q = 2
-MAX_Q = 500
+MAX_Q = 1000
 
 
 def primes_less_than(limit):
@@ -44,6 +44,10 @@ def main():
     q_values = primes_less_than(MAX_Q + 1)
     previous_primorial = 1
 
+    max_M = -1
+    max_q = None
+    max_extremal_class = None
+
     print("q,M(q),q^-#,residue class attaining M(q),M(q) < q^-#")
 
     for q in q_values:
@@ -63,6 +67,18 @@ def main():
             f"{q},{M_q},{q_minus_primorial},{extremal_class},"
             f"{inequality_holds}"
         )
+
+        # Track the maximum used in the paper.
+        if 29 <= q <= 997 and M_q > max_M:
+            max_M = M_q
+            max_q = q
+            max_extremal_class = extremal_class
+
+    print()
+    print("Maximum over primes 29 <= q <= 997:")
+    print(f"q = {max_q}")
+    print(f"M(q) = {max_M}")
+    print(f"residue class attaining M(q) = {max_extremal_class} mod {max_q**2}")
 
 
 if __name__ == "__main__":
