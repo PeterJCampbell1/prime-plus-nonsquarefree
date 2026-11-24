@@ -4,19 +4,19 @@
 Computational verification accompanying the paper
 *Prime plus a non-square-free integer: an elementary approach*.
 
-The paper proves that every integer \(n > 24\) can be written as
+The paper proves that every integer $n > 24$ can be written as
 the sum of a prime and a positive integer that is not square-free.
 
 ## Verification scripts
 
 - `compute_small_prime_square_values.py`:
-  Computes \(P(q^2)\) and \(q^-\#\) for \(q = 5, 7, 11, 13\).
+  Computes $P(q^2)$ and $q^-\#$ for $q = 5, 7, 11, 13$.
 - `verify_small_representations.py`:
   Verifies the required representations for all integers
-  \(24 < n \leq 3617\) satisfying \(6 \mid n\).
+  $24 < n \leq 3617$ satisfying $6 \mid n$.
 - `verify_prime_square_bound.py`:
-  Verifies \(P(q^2) < q^-\#\) for every prime
-  \(17 \leq q \leq 14\,347\).
+  Verifies $P(q^2) < q^-\#$ for every prime
+  $17 \leq q \leq 14\,347$.
 
 ## Running the scripts
 
@@ -51,5 +51,5 @@ The complete results of `verify_prime_square_bound.py` are
 included in `prime_square_bound_results.csv`.
 
 All 1,677 primorial inequalities were verified successfully.
-The largest computed value of \(P(q^2)\) was 94,121,869,957,
-attained at \(q = 14\,293\).
+The largest computed value of $P(q^2)$ was 94,121,869,957,
+attained at $q = 14\,293$.
